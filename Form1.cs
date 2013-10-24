@@ -42,7 +42,10 @@ namespace BlueRelayController
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            relay.OpenRelay();
+            for (int i = 0; i < 256; i++)
+                comboBox1.Items.Add(i);
+            comboBox1.SelectedIndex = 0;
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
@@ -101,6 +104,23 @@ namespace BlueRelayController
         private void button2_Click(object sender, EventArgs e)
         {
             relay.AllRelaysOff();
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
+            checkBox6.Checked = false;
+            checkBox7.Checked = false;
+            checkBox8.Checked = false;
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            byte[] toSend = new byte[2];
+            toSend[0] = byte.Parse(comboBox1.SelectedItem.ToString());
+
+            relay.SendByte(toSend);
         }
 
     }

@@ -39,6 +39,9 @@
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // OpenDevice
@@ -47,7 +50,7 @@
             this.OpenDevice.Name = "OpenDevice";
             this.OpenDevice.Size = new System.Drawing.Size(62, 37);
             this.OpenDevice.TabIndex = 0;
-            this.OpenDevice.Text = "connect";
+            this.OpenDevice.Text = "Connect";
             this.OpenDevice.UseVisualStyleBackColor = true;
             this.OpenDevice.Click += new System.EventHandler(this.OpenDevice_Click);
             // 
@@ -141,7 +144,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(22, 313);
+            this.button1.Location = new System.Drawing.Point(22, 425);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(62, 37);
             this.button1.TabIndex = 9;
@@ -151,7 +154,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(22, 259);
+            this.button2.Location = new System.Drawing.Point(22, 264);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(62, 37);
             this.button2.TabIndex = 10;
@@ -159,12 +162,43 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 308);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Send Byte";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(22, 333);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(62, 21);
+            this.comboBox1.TabIndex = 12;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(22, 367);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(62, 37);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Send";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(116, 362);
+            this.ClientSize = new System.Drawing.Size(116, 476);
             this.ControlBox = false;
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox8);
@@ -197,6 +231,9 @@
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button3;
     }
 }
 
