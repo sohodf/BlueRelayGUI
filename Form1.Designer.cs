@@ -28,123 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.OpenDevice = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.relay1 = new System.Windows.Forms.CheckBox();
+            this.relay8 = new System.Windows.Forms.CheckBox();
+            this.relay3 = new System.Windows.Forms.CheckBox();
+            this.relay2 = new System.Windows.Forms.CheckBox();
+            this.relay4 = new System.Windows.Forms.CheckBox();
+            this.relay5 = new System.Windows.Forms.CheckBox();
+            this.relay6 = new System.Windows.Forms.CheckBox();
+            this.relay7 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // OpenDevice
+            // relay1
             // 
-            this.OpenDevice.Location = new System.Drawing.Point(22, 12);
-            this.OpenDevice.Name = "OpenDevice";
-            this.OpenDevice.Size = new System.Drawing.Size(62, 37);
-            this.OpenDevice.TabIndex = 0;
-            this.OpenDevice.Text = "Connect";
-            this.OpenDevice.UseVisualStyleBackColor = true;
-            this.OpenDevice.Click += new System.EventHandler(this.OpenDevice_Click);
+            this.relay1.AutoSize = true;
+            this.relay1.Location = new System.Drawing.Point(36, 123);
+            this.relay1.Name = "relay1";
+            this.relay1.Size = new System.Drawing.Size(62, 17);
+            this.relay1.TabIndex = 1;
+            this.relay1.Text = "Relay 1";
+            this.relay1.UseVisualStyleBackColor = true;
+            this.relay1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // checkBox1
+            // relay8
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(22, 65);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(62, 17);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Relay 1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.relay8.AutoSize = true;
+            this.relay8.Location = new System.Drawing.Point(36, 284);
+            this.relay8.Name = "relay8";
+            this.relay8.Size = new System.Drawing.Size(62, 17);
+            this.relay8.TabIndex = 2;
+            this.relay8.Text = "Relay 8";
+            this.relay8.UseVisualStyleBackColor = true;
+            this.relay8.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
-            // checkBox2
+            // relay3
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(22, 226);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(62, 17);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "Relay 8";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.relay3.AutoSize = true;
+            this.relay3.Location = new System.Drawing.Point(36, 169);
+            this.relay3.Name = "relay3";
+            this.relay3.Size = new System.Drawing.Size(62, 17);
+            this.relay3.TabIndex = 3;
+            this.relay3.Text = "Relay 3";
+            this.relay3.UseVisualStyleBackColor = true;
+            this.relay3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
-            // checkBox3
+            // relay2
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(22, 111);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(62, 17);
-            this.checkBox3.TabIndex = 3;
-            this.checkBox3.Text = "Relay 3";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.relay2.AutoSize = true;
+            this.relay2.Location = new System.Drawing.Point(36, 146);
+            this.relay2.Name = "relay2";
+            this.relay2.Size = new System.Drawing.Size(62, 17);
+            this.relay2.TabIndex = 4;
+            this.relay2.Text = "Relay 2";
+            this.relay2.UseVisualStyleBackColor = true;
+            this.relay2.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
-            // checkBox4
+            // relay4
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(22, 88);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(62, 17);
-            this.checkBox4.TabIndex = 4;
-            this.checkBox4.Text = "Relay 2";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            this.relay4.AutoSize = true;
+            this.relay4.Location = new System.Drawing.Point(36, 192);
+            this.relay4.Name = "relay4";
+            this.relay4.Size = new System.Drawing.Size(62, 17);
+            this.relay4.TabIndex = 5;
+            this.relay4.Text = "Relay 4";
+            this.relay4.UseVisualStyleBackColor = true;
+            this.relay4.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
-            // checkBox5
+            // relay5
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(22, 134);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(62, 17);
-            this.checkBox5.TabIndex = 5;
-            this.checkBox5.Text = "Relay 4";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            this.relay5.AutoSize = true;
+            this.relay5.Location = new System.Drawing.Point(36, 215);
+            this.relay5.Name = "relay5";
+            this.relay5.Size = new System.Drawing.Size(62, 17);
+            this.relay5.TabIndex = 6;
+            this.relay5.Text = "Relay 5";
+            this.relay5.UseVisualStyleBackColor = true;
+            this.relay5.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
-            // checkBox6
+            // relay6
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(22, 157);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(62, 17);
-            this.checkBox6.TabIndex = 6;
-            this.checkBox6.Text = "Relay 5";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            this.relay6.AutoSize = true;
+            this.relay6.Location = new System.Drawing.Point(36, 238);
+            this.relay6.Name = "relay6";
+            this.relay6.Size = new System.Drawing.Size(62, 17);
+            this.relay6.TabIndex = 7;
+            this.relay6.Text = "Relay 6";
+            this.relay6.UseVisualStyleBackColor = true;
+            this.relay6.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
-            // checkBox7
+            // relay7
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(22, 180);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(62, 17);
-            this.checkBox7.TabIndex = 7;
-            this.checkBox7.Text = "Relay 6";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(22, 203);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(62, 17);
-            this.checkBox8.TabIndex = 8;
-            this.checkBox8.Text = "Relay 7";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
+            this.relay7.AutoSize = true;
+            this.relay7.Location = new System.Drawing.Point(36, 261);
+            this.relay7.Name = "relay7";
+            this.relay7.Size = new System.Drawing.Size(62, 17);
+            this.relay7.TabIndex = 8;
+            this.relay7.Text = "Relay 7";
+            this.relay7.UseVisualStyleBackColor = true;
+            this.relay7.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(22, 425);
+            this.button1.Location = new System.Drawing.Point(52, 530);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(62, 37);
             this.button1.TabIndex = 9;
@@ -154,18 +154,18 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(22, 264);
+            this.button2.Location = new System.Drawing.Point(19, 316);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(62, 37);
+            this.button2.Size = new System.Drawing.Size(89, 37);
             this.button2.TabIndex = 10;
-            this.button2.Text = "All Off";
+            this.button2.Text = "Refresh Status";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 308);
+            this.label1.Location = new System.Drawing.Point(36, 366);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 11;
@@ -175,14 +175,14 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(22, 333);
+            this.comboBox1.Location = new System.Drawing.Point(36, 391);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(62, 21);
             this.comboBox1.TabIndex = 12;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(22, 367);
+            this.button3.Location = new System.Drawing.Point(36, 425);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(62, 37);
             this.button3.TabIndex = 13;
@@ -190,50 +190,142 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(147, 499);
+            this.tabControl1.TabIndex = 14;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.button5);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.comboBox2);
+            this.tabPage1.Controls.Add(this.relay1);
+            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.relay8);
+            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.relay3);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.relay2);
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.relay4);
+            this.tabPage1.Controls.Add(this.relay5);
+            this.tabPage1.Controls.Add(this.relay7);
+            this.tabPage1.Controls.Add(this.relay6);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(139, 473);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "8 Port";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(19, 64);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(89, 37);
+            this.button5.TabIndex = 16;
+            this.button5.Text = "Reload Relays";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(28, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Select Relay:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(6, 37);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(119, 21);
+            this.comboBox2.TabIndex = 14;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(139, 473);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "16 Port";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(114, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(6, 57);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Send";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(116, 476);
+            this.ClientSize = new System.Drawing.Size(169, 579);
             this.ControlBox = false;
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox8);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.OpenDevice);
             this.Name = "Form1";
             this.Text = "Relay";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button OpenDevice;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox relay1;
+        private System.Windows.Forms.CheckBox relay8;
+        private System.Windows.Forms.CheckBox relay3;
+        private System.Windows.Forms.CheckBox relay2;
+        private System.Windows.Forms.CheckBox relay4;
+        private System.Windows.Forms.CheckBox relay5;
+        private System.Windows.Forms.CheckBox relay6;
+        private System.Windows.Forms.CheckBox relay7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button5;
     }
 }
 
