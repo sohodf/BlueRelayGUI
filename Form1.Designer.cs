@@ -61,9 +61,10 @@
             this.relay1.Name = "relay1";
             this.relay1.Size = new System.Drawing.Size(62, 17);
             this.relay1.TabIndex = 1;
+            this.relay1.Tag = "1";
             this.relay1.Text = "Relay 1";
             this.relay1.UseVisualStyleBackColor = true;
-            this.relay1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.relay1.CheckedChanged += new System.EventHandler(this.relay_CheckedChanged);
             // 
             // relay8
             // 
@@ -72,9 +73,10 @@
             this.relay8.Name = "relay8";
             this.relay8.Size = new System.Drawing.Size(62, 17);
             this.relay8.TabIndex = 2;
+            this.relay8.Tag = "8";
             this.relay8.Text = "Relay 8";
             this.relay8.UseVisualStyleBackColor = true;
-            this.relay8.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.relay8.CheckedChanged += new System.EventHandler(this.relay_CheckedChanged);
             // 
             // relay3
             // 
@@ -83,9 +85,10 @@
             this.relay3.Name = "relay3";
             this.relay3.Size = new System.Drawing.Size(62, 17);
             this.relay3.TabIndex = 3;
+            this.relay3.Tag = "3";
             this.relay3.Text = "Relay 3";
             this.relay3.UseVisualStyleBackColor = true;
-            this.relay3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.relay3.CheckedChanged += new System.EventHandler(this.relay_CheckedChanged);
             // 
             // relay2
             // 
@@ -94,9 +97,10 @@
             this.relay2.Name = "relay2";
             this.relay2.Size = new System.Drawing.Size(62, 17);
             this.relay2.TabIndex = 4;
+            this.relay2.Tag = "2";
             this.relay2.Text = "Relay 2";
             this.relay2.UseVisualStyleBackColor = true;
-            this.relay2.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            this.relay2.CheckedChanged += new System.EventHandler(this.relay_CheckedChanged);
             // 
             // relay4
             // 
@@ -105,9 +109,10 @@
             this.relay4.Name = "relay4";
             this.relay4.Size = new System.Drawing.Size(62, 17);
             this.relay4.TabIndex = 5;
+            this.relay4.Tag = "4";
             this.relay4.Text = "Relay 4";
             this.relay4.UseVisualStyleBackColor = true;
-            this.relay4.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            this.relay4.CheckedChanged += new System.EventHandler(this.relay_CheckedChanged);
             // 
             // relay5
             // 
@@ -116,9 +121,10 @@
             this.relay5.Name = "relay5";
             this.relay5.Size = new System.Drawing.Size(62, 17);
             this.relay5.TabIndex = 6;
+            this.relay5.Tag = "5";
             this.relay5.Text = "Relay 5";
             this.relay5.UseVisualStyleBackColor = true;
-            this.relay5.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            this.relay5.CheckedChanged += new System.EventHandler(this.relay_CheckedChanged);
             // 
             // relay6
             // 
@@ -127,9 +133,10 @@
             this.relay6.Name = "relay6";
             this.relay6.Size = new System.Drawing.Size(62, 17);
             this.relay6.TabIndex = 7;
+            this.relay6.Tag = "6";
             this.relay6.Text = "Relay 6";
             this.relay6.UseVisualStyleBackColor = true;
-            this.relay6.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            this.relay6.CheckedChanged += new System.EventHandler(this.relay_CheckedChanged);
             // 
             // relay7
             // 
@@ -138,9 +145,10 @@
             this.relay7.Name = "relay7";
             this.relay7.Size = new System.Drawing.Size(62, 17);
             this.relay7.TabIndex = 8;
+            this.relay7.Tag = "7";
             this.relay7.Text = "Relay 7";
             this.relay7.UseVisualStyleBackColor = true;
-            this.relay7.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
+            this.relay7.CheckedChanged += new System.EventHandler(this.relay_CheckedChanged);
             // 
             // button1
             // 
@@ -275,7 +283,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(6, 57);
+            this.button4.Location = new System.Drawing.Point(23, 45);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 1;

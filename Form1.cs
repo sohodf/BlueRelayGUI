@@ -20,6 +20,7 @@ namespace BlueRelayController
 {
     public partial class Form1 : Form
     {
+        private const string BLUE_RELAY_MUTEX_NAME = "BlueRelayMutex";
         RelayCommands relay = new RelayCommands();
         private byte[] _sentBytes = new byte[2];
         private uint _receivedBytes;
@@ -37,74 +38,75 @@ namespace BlueRelayController
             relay.OpenRelay();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (relay1.Checked)
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 1, true);
-            else
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 1, false);
-        }
+        //private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        //{
+            
+        //    if (relay1.Checked)
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 1, true);
+        //    else
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 1, false);
+        //}
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {                    
-            if (relay8.Checked == true)
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 8, true);
-            else
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 8, true);
-        }
+        //private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        //{                    
+        //    if (relay8.Checked == true)
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 8, true);
+        //    else
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 8, true);
+        //}
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (relay3.Checked == true)
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 3, true);
-            else
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 3, false);
-        }
+        //private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (relay3.Checked == true)
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 3, true);
+        //    else
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 3, false);
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-            if (relay2.Checked == true)
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 2, true);
-            else
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 2, false);
-        }
+        //private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (relay2.Checked == true)
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 2, true);
+        //    else
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 2, false);
+        //}
 
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
-        {
-            if (relay4.Checked == true)
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 4, true);
-            else
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 4, false);
-        }
+        //private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (relay4.Checked == true)
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 4, true);
+        //    else
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 4, false);
+        //}
 
-        private void checkBox6_CheckedChanged(object sender, EventArgs e)
-        {
-            if (relay5.Checked == true)
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 5, true);
-            else
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 5, false);
-        }
+        //private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (relay5.Checked == true)
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 5, true);
+        //    else
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 5, false);
+        //}
 
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
-        {
-            if (relay6.Checked == true)
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 6, true);
-            else
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 6, false);
-        }
+        //private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (relay6.Checked == true)
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 6, true);
+        //    else
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 6, false);
+        //}
 
-        private void checkBox8_CheckedChanged(object sender, EventArgs e)
-        {
-            if (relay7.Checked == true)
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 7, true);
-            else
-                SetRelayPort(comboBox2.SelectedItem.ToString(), 7, false);
-        }
+        //private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (relay7.Checked == true)
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 7, true);
+        //    else
+        //        SetRelayPort(comboBox2.SelectedItem.ToString(), 7, false);
+        //}
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -198,21 +200,44 @@ namespace BlueRelayController
         // ------------------------------------------------------------------------------------------------------------------
 
         private const string BLUE_RELAY_MUTEX = "BlueRelayMutex";
-        Mutex mutex = new Mutex(false, BLUE_RELAY_MUTEX);
+        Mutex mutex = new Mutex();
+        private static int MUTEX_TIMEOUT = 5000;
 
         private void Form1_Load(object sender, EventArgs e)
         {
             //relay.OpenRelay();
             for (int i = 0; i < 256; i++)
                 comboBox1.Items.Add(i);
-            comboBox1.SelectedIndex = 0;
-            foreach (string serial in GetConnectedRelays())
-            {
-                comboBox2.Items.Add(serial);
-            }
-            if (comboBox2.Items.Count != 0)
-                comboBox2.SelectedIndex = 0;
+            UpdateConnectedRelays();
 
+        }
+        //private delegate void UpdateConnectedRelays();
+        private void UpdateConnectedRelays()
+        {
+            comboBox2.Items.Clear();
+            if (GetConnectedRelays().Length == 0)
+            {
+                comboBox2.Items.Add("No relay detected");
+                foreach (Control c in tabPage1.Controls)
+                {
+                    if (c is CheckBox)
+                        c.Enabled = false;
+                }
+            }
+            else
+            {
+                foreach (string serial in GetConnectedRelays())
+                {
+                    comboBox2.Items.Add(serial);
+                }
+                foreach (Control c in tabPage1.Controls)
+                {
+                    if (c is CheckBox)
+                        c.Enabled = true;
+                }
+            }
+
+            comboBox2.SelectedIndex = 0;
         }
 
         //returns a string array of all the connected devices
@@ -244,38 +269,48 @@ namespace BlueRelayController
         {
             byte[] sentBytes = new byte[2];
             uint receivedBytes = 0;
+            FTDI activeRelay = new FTDI();
 
-            FTDI activeRelay = OpenRelay(relaySerial);
-            if (activeRelay != null)
-            lock (activeRelay)
+            try
             {
-                try
+                activeRelay = OpenRelay(relaySerial);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return FTDI.FT_STATUS.FT_DEVICE_NOT_OPENED;
+            }
+
+                lock (activeRelay)
                 {
-                    //get current relay status
-                    byte currentStatus = (byte)GetRelayStatus(activeRelay);
-                    // calculate the exact commands to be sent
-                    int pow = relayPort - 1;
-                    int command = Power(2, pow);
-                    //XOR between current status and requested bit
-                    sentBytes[0] = (byte)(command ^ currentStatus);
-
-                    FTDI.FT_STATUS ftdiStatus = activeRelay.Write(sentBytes, 1, ref receivedBytes);
-
-                    if (ftdiStatus != FTDI.FT_STATUS.FT_OK)
+                    try
                     {
-                        throw new Exception("Bad status: " + ftdiStatus);
+                        //get current relay status
+                        byte currentStatus = (byte)GetRelayStatus(activeRelay);
+                        // calculate the exact commands to be sent
+                        int pow = relayPort - 1;
+                        //int command = Power(2, pow);
+                        int command = (int)Math.Pow((double)2, (double)pow);
+                        //XOR between current status and requested bit
+                        sentBytes[0] = (byte)(command ^ currentStatus);
+
+                        FTDI.FT_STATUS ftdiStatus = activeRelay.Write(sentBytes, 1, ref receivedBytes);
+
+                        if (ftdiStatus != FTDI.FT_STATUS.FT_OK)
+                        {
+                            throw new Exception("Bad status: " + ftdiStatus);
+                        }
+                    }
+
+                    catch (Exception RelayNotOpen)
+                    {
+                        Console.WriteLine(RelayNotOpen.Message);
+                    }
+                    finally
+                    {
+                        CloseRelay(activeRelay);
                     }
                 }
-
-                catch (Exception RelayNotOpen)
-                {
-                    Console.WriteLine(RelayNotOpen.Message);
-                }
-                finally
-                {
-                    CloseRelay(activeRelay);
-                }
-            }
 
             return FTDI.FT_STATUS.FT_OK;
         }
@@ -378,15 +413,11 @@ namespace BlueRelayController
             }
             return (uint)relayStatus;
         }
-
+        
         private void button5_Click_1(object sender, EventArgs e)
         {
-            comboBox2.Items.Clear();
-            foreach (string item in GetConnectedRelays())   
-            {
-                comboBox2.Items.Add(item);
-                comboBox2.SelectedIndex = 0;
-            }
+            UpdateConnectedRelays();
+            UpdateCheckboxesWithoutEventInvoke(UpdateConnectedRelays);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -402,17 +433,43 @@ namespace BlueRelayController
 
         }
 
+        //used for updating the checkboxes without invoking an event
+        private void UpdateCheckboxesWithoutEventInvoke(Action todo)
+        {
+            foreach (Control c in this.tabPage1.Controls)
+            {
+                if (c is CheckBox)
+                {
+                    CheckBox thisCheck = (CheckBox)c;
+                    thisCheck.CheckedChanged -= relay_CheckedChanged;
+                }
+            }
+            
+            todo.Invoke();
+
+            foreach (Control c in this.tabPage1.Controls)
+            {
+                if (c is CheckBox)
+                {
+                    CheckBox thisCheck = (CheckBox)c;
+                    thisCheck.CheckedChanged -= relay_CheckedChanged;
+                    thisCheck.CheckedChanged += relay_CheckedChanged;
+                }
+            }
+        }
+
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UpdateCheckboxes();
+            UpdateCheckboxesWithoutEventInvoke(UpdateCheckboxes);
         }
 
         private void UpdateCheckboxes()
         {
             //איכס איכס איכס
-
+            
             FTDI relay = OpenRelay(comboBox2.SelectedItem.ToString());
-
+            if (relay == null)
+                return;
 
             _ftStatus = relay.SetBaudRate(921600);
             if (_ftStatus != FTDI.FT_STATUS.FT_OK)
@@ -486,12 +543,54 @@ namespace BlueRelayController
         public FTDI GetRelayInstance()
         {
             Console.WriteLine("attempting to acquire mutex");
-            mutex.WaitOne();
+            mutex = AcquireMutex(BLUE_RELAY_MUTEX_NAME);
             Console.WriteLine("mutex acquired");
             FTDI relay = new FTDI();
             return relay;
         }
 
+        private void relay_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CheckBox cb = (CheckBox)sender;
+
+                if (cb.Checked == true)
+                    SetRelayPort(comboBox2.SelectedItem.ToString(), int.Parse(cb.Tag.ToString()), true);
+                else
+                    SetRelayPort(comboBox2.SelectedItem.ToString(), int.Parse(cb.Tag.ToString()), false);
+            }
+            catch (Exception noRelayAcquiredYet)
+            {
+                Console.WriteLine("no relay acquired before press");
+            }
+        }
+
+        /// <summary>
+        /// Acquire a system-wide mutex with the specified name.
+        /// </summary>
+        /// <param name="mutexName">The system-wide mutex name</param>
+        /// <returns></returns>
+        private Mutex AcquireMutex(string mutexName)
+        {
+            Console.WriteLine("[AcquireMutex] Trying to acquire mutex: {0}", mutexName);
+
+            bool createdNew;
+
+            Mutex mutex = new Mutex(true, mutexName, out createdNew);
+
+            // (from MSDN)
+            // This thread owns the mutex only if it both requested  
+            // initial ownership and created the named mutex. Otherwise, 
+            // it can request the named mutex by calling WaitOne. 
+            if (!createdNew)
+            {
+                if (!mutex.WaitOne(MUTEX_TIMEOUT))
+                    throw new Exception("Mutex not acquired.");
+            }
+
+            return mutex;
+        }
 
     }
 }
