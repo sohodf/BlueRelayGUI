@@ -24,7 +24,6 @@ namespace BlueRelayController
         public RelayControllerMain()
         {
             InitializeComponent();
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,8 +39,6 @@ namespace BlueRelayController
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 256; i++)
-                comboBox1.Items.Add(i);
             UpdateConnectedRelays();
             System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
             timer.Interval = 1000;
@@ -53,7 +50,7 @@ namespace BlueRelayController
         private void timer1_Tick(object sender, EventArgs e)
         {
             ExecuteActionWithoutCheckboxEventInvoke(UpdateCheckboxes);
-            Console.WriteLine("[tick] - checkboxes updated");
+            //Console.WriteLine("[tick] - checkboxes updated");
         }
 
         //updates connected relays in the combo box and enables checkboxes.
@@ -63,7 +60,7 @@ namespace BlueRelayController
             if (RA.GetConnectedRelays().Length == 0)
             {
                 comboBox2.Items.Add("No relay detected");
-                foreach (Control c in tabPage1.Controls)
+                foreach (Control c in groupBox1.Controls)
                 {
                     if (c is CheckBox)
                         c.Enabled = false;
@@ -75,7 +72,7 @@ namespace BlueRelayController
                 {
                     comboBox2.Items.Add(serial);
                 }
-                foreach (Control c in tabPage1.Controls)
+                foreach (Control c in groupBox1.Controls)
                 {
                     if (c is CheckBox)
                         c.Enabled = true;
@@ -94,7 +91,7 @@ namespace BlueRelayController
         //used for updating the checkboxes without invoking an event
         private void ExecuteActionWithoutCheckboxEventInvoke(Action todo)
         {
-            foreach (Control c in this.tabPage1.Controls)
+            foreach (Control c in this.groupBox1.Controls)
             {
                 if (c is CheckBox)
                 {
@@ -105,7 +102,7 @@ namespace BlueRelayController
             
             todo.Invoke();
 
-            foreach (Control c in this.tabPage1.Controls)
+            foreach (Control c in this.groupBox1.Controls)
             {
                 if (c is CheckBox)
                 {
@@ -118,13 +115,13 @@ namespace BlueRelayController
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ExecuteActionWithoutCheckboxEventInvoke(UpdateCheckboxes);
+            
         }
 
 
         private uint getRelayStatus()
         {
-            FTDI relay = RA.OpenRelay(comboBox2.SelectedItem.ToString());
+            FTDI relay = RA.OpenRelay(comboBox2.GetItemText(comboBox2.SelectedItem));
             uint status = RA.GetRelayStatus(relay);
             RA.CloseRelay(relay);
             return status;
@@ -205,6 +202,22 @@ namespace BlueRelayController
             }
         }
 
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            RA.WriteByteToRelay(comboBox2.SelectedItem.ToString(), 255);
+            ExecuteActionWithoutCheckboxEventInvoke(UpdateCheckboxes);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            RA.WriteByteToRelay(comboBox2.SelectedItem.ToString(), 0);
+            ExecuteActionWithoutCheckboxEventInvoke(UpdateCheckboxes);
+        }
+
+        private void comboBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            ExecuteActionWithoutCheckboxEventInvoke(UpdateCheckboxes);
+        }
 
     }
 }

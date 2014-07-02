@@ -1,15 +1,3 @@
-c:\users\itl\documents\visual studio 2010\Projects\BlueRelayController\BlueRelayController\bin\Debug\BlueRelayController.exe
-c:\users\itl\documents\visual studio 2010\Projects\BlueRelayController\BlueRelayController\bin\Debug\BlueRelayController.pdb
-c:\users\itl\documents\visual studio 2010\Projects\BlueRelayController\BlueRelayController\obj\x86\Debug\ResolveAssemblyReference.cache
-c:\users\itl\documents\visual studio 2010\Projects\BlueRelayController\BlueRelayController\obj\x86\Debug\BlueRelayController.Properties.Resources.resources
-c:\users\itl\documents\visual studio 2010\Projects\BlueRelayController\BlueRelayController\obj\x86\Debug\GenerateResource.read.1.tlog
-c:\users\itl\documents\visual studio 2010\Projects\BlueRelayController\BlueRelayController\obj\x86\Debug\GenerateResource.write.1.tlog
-c:\users\itl\documents\visual studio 2010\Projects\BlueRelayController\BlueRelayController\obj\x86\Debug\BlueRelayController.exe
-c:\users\itl\documents\visual studio 2010\Projects\BlueRelayController\BlueRelayController\obj\x86\Debug\BlueRelayController.pdb
-C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\bin\Debug\BlueRelayControllerDLL.dll
-C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\bin\Debug\FTD2XX_NET.dll
-C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\bin\Debug\BlueRelayControllerDLL.pdb
-C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\bin\Debug\FTD2XX_NET.xml
 \\10.12.225.240\Share\MTBF\BlueRelayController\BlueRelayController\obj\x86\Debug\BlueRelayController.exe
 \\10.12.225.240\Share\MTBF\BlueRelayController\BlueRelayController\obj\x86\Debug\BlueRelayController.pdb
 \\10.12.225.240\Share\MTBF\BlueRelayController\BlueRelayController\bin\Debug\BlueRelayController.exe
@@ -21,4 +9,16 @@ C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelay
 \\10.12.225.240\Share\MTBF\BlueRelayController\BlueRelayController\obj\x86\Debug\BlueRelayController.Properties.Resources.resources
 \\10.12.225.240\Share\MTBF\BlueRelayController\BlueRelayController\obj\x86\Debug\GenerateResource.read.1.tlog
 \\10.12.225.240\Share\MTBF\BlueRelayController\BlueRelayController\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\bin\Debug\BlueRelayController.exe
+C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\bin\Debug\BlueRelayController.pdb
+C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\bin\Debug\BlueRelayControllerDLL.dll
+C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\bin\Debug\FTD2XX_NET.dll
+C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\bin\Debug\BlueRelayControllerDLL.pdb
+C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\bin\Debug\FTD2XX_NET.xml
+C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\obj\x86\Debug\BlueRelayController.RelayControllerMain.resources
+C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\obj\x86\Debug\BlueRelayController.Properties.Resources.resources
+C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\obj\x86\Debug\BlueRelayController.exe
+C:\Users\itl\Documents\Visual Studio 2010\Projects\BlueRelayController\BlueRelayController\obj\x86\Debug\BlueRelayController.pdb

@@ -130,7 +130,8 @@ namespace BlueRelayController
            }
            finally
            {
-               mutex.ReleaseMutex();
+               if (mutex != null)
+                   mutex.ReleaseMutex();
                Console.WriteLine("[SetRelayPort] Mutex released");
            }
 
@@ -300,6 +301,69 @@ namespace BlueRelayController
                    Console.WriteLine("[MutexWrapperWithRetval] Mutex released");
                }
            }
+       }
+
+       //handles complete atomic setting of a relay
+       public void WriteByteToRelay(string relaySerial, byte toWrite)
+       {
+           Mutex mutex = null;
+           FTDI activeRelay = new FTDI();
+           try
+           {
+               mutex = AcquireMutex(BLUE_RELAY_MUTEX);
+               byte[] sentBytes = new byte[2];
+               uint receivedBytes = 0;
+
+               try
+               {
+                   activeRelay = OpenRelay(relaySerial);
+               }
+               catch (Exception e)
+               {
+                   Console.WriteLine(e.Message);
+                   //return FTDI.FT_STATUS.FT_DEVICE_NOT_OPENED;
+               }
+
+               lock (activeRelay)
+               {
+                   try
+                   {
+                       sentBytes[0] = toWrite;
+
+                       FTDI.FT_STATUS ftdiStatus = activeRelay.Write(sentBytes, 1, ref receivedBytes);
+
+                       if (ftdiStatus != FTDI.FT_STATUS.FT_OK)
+                       {
+                           throw new Exception("Bad status: " + ftdiStatus);
+                       }
+                   }
+
+                   catch (Exception RelayNotOpen)
+                   {
+                       Console.WriteLine(RelayNotOpen.Message);
+                   }
+                   //finally
+                   //{
+                   //    CloseRelay(activeRelay);
+                   //    if (mutex != null)
+                   //        mutex.ReleaseMutex();
+                   //}
+               }
+
+               //return FTDI.FT_STATUS.FT_OK;
+           }
+           catch (Exception mna)
+           {
+               Console.WriteLine(mna.Message);
+           }
+           finally
+           {
+               if (mutex != null)
+                   mutex.ReleaseMutex();
+               CloseRelay(activeRelay);
+               Console.WriteLine("[SetRelayPort] Mutex released");
+           }
+
        }
 
     }

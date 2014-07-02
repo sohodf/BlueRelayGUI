@@ -37,25 +37,25 @@
             this.relay6 = new System.Windows.Forms.CheckBox();
             this.relay7 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // relay1
             // 
             this.relay1.AutoSize = true;
-            this.relay1.Location = new System.Drawing.Point(36, 123);
+            this.relay1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay1.Location = new System.Drawing.Point(27, 62);
             this.relay1.Name = "relay1";
-            this.relay1.Size = new System.Drawing.Size(62, 17);
+            this.relay1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.relay1.Size = new System.Drawing.Size(88, 22);
             this.relay1.TabIndex = 1;
             this.relay1.Tag = "1";
             this.relay1.Text = "Relay 1";
@@ -65,9 +65,10 @@
             // relay8
             // 
             this.relay8.AutoSize = true;
-            this.relay8.Location = new System.Drawing.Point(36, 284);
+            this.relay8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay8.Location = new System.Drawing.Point(519, 251);
             this.relay8.Name = "relay8";
-            this.relay8.Size = new System.Drawing.Size(62, 17);
+            this.relay8.Size = new System.Drawing.Size(88, 22);
             this.relay8.TabIndex = 2;
             this.relay8.Tag = "8";
             this.relay8.Text = "Relay 8";
@@ -77,9 +78,11 @@
             // relay3
             // 
             this.relay3.AutoSize = true;
-            this.relay3.Location = new System.Drawing.Point(36, 169);
+            this.relay3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay3.Location = new System.Drawing.Point(27, 180);
             this.relay3.Name = "relay3";
-            this.relay3.Size = new System.Drawing.Size(62, 17);
+            this.relay3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.relay3.Size = new System.Drawing.Size(88, 22);
             this.relay3.TabIndex = 3;
             this.relay3.Tag = "3";
             this.relay3.Text = "Relay 3";
@@ -89,9 +92,11 @@
             // relay2
             // 
             this.relay2.AutoSize = true;
-            this.relay2.Location = new System.Drawing.Point(36, 146);
+            this.relay2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay2.Location = new System.Drawing.Point(27, 118);
             this.relay2.Name = "relay2";
-            this.relay2.Size = new System.Drawing.Size(62, 17);
+            this.relay2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.relay2.Size = new System.Drawing.Size(88, 22);
             this.relay2.TabIndex = 4;
             this.relay2.Tag = "2";
             this.relay2.Text = "Relay 2";
@@ -101,9 +106,11 @@
             // relay4
             // 
             this.relay4.AutoSize = true;
-            this.relay4.Location = new System.Drawing.Point(36, 192);
+            this.relay4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay4.Location = new System.Drawing.Point(27, 251);
             this.relay4.Name = "relay4";
-            this.relay4.Size = new System.Drawing.Size(62, 17);
+            this.relay4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.relay4.Size = new System.Drawing.Size(88, 22);
             this.relay4.TabIndex = 5;
             this.relay4.Tag = "4";
             this.relay4.Text = "Relay 4";
@@ -113,9 +120,10 @@
             // relay5
             // 
             this.relay5.AutoSize = true;
-            this.relay5.Location = new System.Drawing.Point(36, 215);
+            this.relay5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay5.Location = new System.Drawing.Point(519, 62);
             this.relay5.Name = "relay5";
-            this.relay5.Size = new System.Drawing.Size(62, 17);
+            this.relay5.Size = new System.Drawing.Size(88, 22);
             this.relay5.TabIndex = 6;
             this.relay5.Tag = "5";
             this.relay5.Text = "Relay 5";
@@ -125,9 +133,10 @@
             // relay6
             // 
             this.relay6.AutoSize = true;
-            this.relay6.Location = new System.Drawing.Point(36, 238);
+            this.relay6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay6.Location = new System.Drawing.Point(519, 118);
             this.relay6.Name = "relay6";
-            this.relay6.Size = new System.Drawing.Size(62, 17);
+            this.relay6.Size = new System.Drawing.Size(88, 22);
             this.relay6.TabIndex = 7;
             this.relay6.Tag = "6";
             this.relay6.Text = "Relay 6";
@@ -137,9 +146,10 @@
             // relay7
             // 
             this.relay7.AutoSize = true;
-            this.relay7.Location = new System.Drawing.Point(36, 261);
+            this.relay7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relay7.Location = new System.Drawing.Point(519, 180);
             this.relay7.Name = "relay7";
-            this.relay7.Size = new System.Drawing.Size(62, 17);
+            this.relay7.Size = new System.Drawing.Size(88, 22);
             this.relay7.TabIndex = 8;
             this.relay7.Tag = "7";
             this.relay7.Text = "Relay 7";
@@ -148,129 +158,119 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(52, 530);
+            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(484, 100);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 37);
+            this.button1.Size = new System.Drawing.Size(165, 37);
             this.button1.TabIndex = 9;
             this.button1.Text = "Exit";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(19, 316);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 37);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Refresh Status";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 366);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Send Byte";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(36, 391);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(62, 21);
-            this.comboBox1.TabIndex = 12;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(36, 425);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(62, 37);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Send";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(147, 499);
-            this.tabControl1.TabIndex = 14;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.comboBox2);
-            this.tabPage1.Controls.Add(this.relay1);
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.relay8);
-            this.tabPage1.Controls.Add(this.comboBox1);
-            this.tabPage1.Controls.Add(this.relay3);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.relay2);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.relay4);
-            this.tabPage1.Controls.Add(this.relay5);
-            this.tabPage1.Controls.Add(this.relay7);
-            this.tabPage1.Controls.Add(this.relay6);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(139, 473);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "8 Port";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(19, 64);
+            this.button5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(25, 100);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(89, 37);
+            this.button5.Size = new System.Drawing.Size(165, 37);
             this.button5.TabIndex = 16;
-            this.button5.Text = "Refresh List";
+            this.button5.Text = "Refresh relay list";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 12);
+            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(22, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.Size = new System.Drawing.Size(116, 18);
             this.label2.TabIndex = 15;
             this.label2.Text = "Select Relay:";
             // 
             // comboBox2
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(6, 37);
+            this.comboBox2.Location = new System.Drawing.Point(25, 52);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(119, 21);
+            this.comboBox2.Size = new System.Drawing.Size(165, 26);
             this.comboBox2.TabIndex = 14;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox2_MouseClick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.relay4);
+            this.groupBox1.Controls.Add(this.relay8);
+            this.groupBox1.Controls.Add(this.relay1);
+            this.groupBox1.Controls.Add(this.relay2);
+            this.groupBox1.Controls.Add(this.relay3);
+            this.groupBox1.Controls.Add(this.relay5);
+            this.groupBox1.Controls.Add(this.relay6);
+            this.groupBox1.Controls.Add(this.relay7);
+            this.groupBox1.Location = new System.Drawing.Point(23, 155);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(626, 335);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Relays";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BlueRelayController.Properties.Resources._8_port_relay_front;
+            this.pictureBox1.Location = new System.Drawing.Point(132, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(365, 289);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(25, 513);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(165, 37);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "All On";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(484, 513);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(165, 37);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "All Off";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // RelayControllerMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(169, 579);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(669, 562);
             this.ControlBox = false;
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboBox2);
             this.Name = "RelayControllerMain";
-            this.Text = "Relay";
+            this.Text = "Blue relay controller application";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -285,15 +285,13 @@
         private System.Windows.Forms.CheckBox relay6;
         private System.Windows.Forms.CheckBox relay7;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
