@@ -40,7 +40,7 @@ namespace BlueRelayController
                 {
                     Console.WriteLine("");
                     Console.WriteLine("'get' returns the serials of the connected relays");
-                    Console.WriteLine(" Usage: exec <relay serial> <port (1-8)> <state (0/1)>");
+                    Console.WriteLine(" Usage: exec <relay serial> <port (1-8)> <state (true/false)>");
 
                 }
                 else if (args[0] == "get")
@@ -56,7 +56,7 @@ namespace BlueRelayController
                         Console.WriteLine("");
                         foreach (string serial in RC.GetConnectedRelays())
                         {
-                            if (serial != "")
+                            if (!String.IsNullOrEmpty(serial))
                                 Console.WriteLine(serial);
                         }
 
