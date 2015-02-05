@@ -20,6 +20,7 @@ namespace BlueRelayController
     {
         RelayActions RA = new RelayActions();
         private FTDI.FT_STATUS _ftStatus;
+        private static int RELAY_UPDATE_INTERVAL_IN_MS = 1000;
 
         public RelayControllerMain()
         {
@@ -41,7 +42,7 @@ namespace BlueRelayController
         {
             UpdateConnectedRelays();
             System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-            timer.Interval = 1000;
+            timer.Interval = RELAY_UPDATE_INTERVAL_IN_MS;
             timer.Enabled = true;
             timer.Tick+= new EventHandler(timer1_Tick);
             timer.Start(); 
@@ -142,44 +143,89 @@ namespace BlueRelayController
 
 
             if (bits[0] == 1)
+            {
                 relay1.Checked = true;
+                relay1indicator.BackColor = Color.Red;
+            }
             else
+            {
                 relay1.Checked = false;
-
+                relay1indicator.BackColor = Color.LightGray;
+            }
             if (bits[1] == 1)
+            {
                 relay2.Checked = true;
+                relay2indicator.BackColor = Color.Red;
+            }
             else
+            {
                 relay2.Checked = false;
-
+                relay2indicator.BackColor = Color.LightGray;
+            }
             if (bits[2] == 1)
+            {
                 relay3.Checked = true;
+                relay3indicator.BackColor = Color.Red;
+            }
             else
+            {
                 relay3.Checked = false;
+                relay3indicator.BackColor = Color.LightGray;
+            }
 
             if (bits[3] == 1)
+            {
                 relay4.Checked = true;
+                relay4indicator.BackColor = Color.Red;
+            }
             else
+            {
                 relay4.Checked = false;
+                relay4indicator.BackColor = Color.LightGray;
+            }
 
             if (bits[4] == 1)
+            {
                 relay5.Checked = true;
+                relay5indicator.BackColor = Color.Red;
+            }
             else
+            {
                 relay5.Checked = false;
-
+                relay5indicator.BackColor = Color.LightGray;
+            }
             if (bits[5] == 1)
+            {
                 relay6.Checked = true;
+                relay6indicator.BackColor = Color.Red;
+            }
             else
+            {
                 relay6.Checked = false;
+                relay6indicator.BackColor = Color.LightGray;
+            }
 
             if (bits[6] == 1)
+            {
                 relay7.Checked = true;
+                relay7indicator.BackColor = Color.Red;
+            }
             else
+            {
                 relay7.Checked = false;
+                relay7indicator.BackColor = Color.LightGray;
+            }
 
             if (bits[7] == 1)
+            {
                 relay8.Checked = true;
+                relay8indicator.BackColor = Color.Red;
+            }
             else
+            {
                 relay8.Checked = false;
+                relay8indicator.BackColor = Color.LightGray;
+            }
 
             
         }
@@ -189,7 +235,7 @@ namespace BlueRelayController
         {
             try
             {
-                CheckBox cb = (CheckBox)sender;
+                CheckBox cb = (CheckBox) sender;
 
                 if (cb.Checked == true)
                     RA.SetRelayPort(comboBox2.SelectedItem.ToString(), int.Parse(cb.Tag.ToString()), true);
@@ -200,6 +246,7 @@ namespace BlueRelayController
             {
                 Console.WriteLine("no relay acquired before press");
             }
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -217,6 +264,18 @@ namespace BlueRelayController
         private void comboBox2_MouseClick(object sender, MouseEventArgs e)
         {
             ExecuteActionWithoutCheckboxEventInvoke(UpdateCheckboxes);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Clipboard.SetText(comboBox2.GetItemText(comboBox2.SelectedItem));
+            }
+            catch (Exception noValueToCopy)
+            {
+                Console.WriteLine("No value selected");
+            }
         }
 
     }

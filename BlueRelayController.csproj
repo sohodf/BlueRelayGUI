@@ -13,6 +13,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <FodyPath>..\packages\Fody.1.14.0</FodyPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -32,6 +33,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>8 port relay front.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BlueRelayControllerDLL">
@@ -62,6 +66,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelayActions.cs" />
+    <Compile Include="RelayNoGUI.cs" />
     <Compile Include="RelayState.cs" />
     <EmbeddedResource Include="RelayControllerMain.resx">
       <DependentUpon>RelayControllerMain.cs</DependentUpon>
@@ -76,6 +81,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Fody.targets" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -89,7 +96,15 @@
   <ItemGroup>
     <None Include="Resources\8 port relay front.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8 port relay front1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="8 port relay front.ico" />
+    <Content Include="FodyWeavers.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="Fody.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -15,7 +15,7 @@ namespace BlueRelayController
     {
        private const string BLUE_RELAY_MUTEX = "BlueRelayMutex";
        Mutex mutex = new Mutex();
-       private static int MUTEX_TIMEOUT = 5000;
+       private static int MUTEX_TIMEOUT = 1000;
        RelayCommands relay = new RelayCommands();
        private byte[] _sentBytes = new byte[2];
        private uint _receivedBytes;

@@ -66,5 +66,12 @@ namespace BlueRelayController.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        internal static System.Drawing.Bitmap _8_port_relay_front1 {
+            get {
+                object obj = ResourceManager.GetObject("8 port relay front1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
