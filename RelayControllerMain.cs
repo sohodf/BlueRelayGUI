@@ -40,6 +40,7 @@ namespace BlueRelayController
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             UpdateConnectedRelays();
             System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
             timer.Interval = RELAY_UPDATE_INTERVAL_IN_MS;
